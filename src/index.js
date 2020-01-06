@@ -65,9 +65,8 @@ let getAnswer = (q) => {
 let jokerQuizz = document.getElementById('buttonJoker');
 jokerQuizz.addEventListener('click' , (e) => {
     getAnswer(movieArray[0]);
-    //e.stopPropagation();
-    e.preventDefault();	
-  });
+    e.preventDefault();
+});
 
 
 
