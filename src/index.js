@@ -67,4 +67,3 @@ searching.addEventListener('click' , function getanswer(){
         .then(showMovies)
         .catch((error) => { console.log(error) })
     });
-
