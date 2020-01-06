@@ -29,9 +29,8 @@ getUser((user) => {
 
 }) */
 
+// Función para recorre y mostrar la data y que llama Fetch
 let data;
-
-let searching = document.getElementById('buttonSearch');
 
 const showMovies = (movies) => {
     document.getElementById('answer').innerHTML = '';
@@ -56,6 +55,9 @@ const showMovies = (movies) => {
     };
 
 
+// Acción de buscar película
+
+let searching = document.getElementById('buttonSearch');
 searching.addEventListener('click' , function getanswer(){
     
     let q = document.getElementById('qurybox').value;
