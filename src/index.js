@@ -31,7 +31,8 @@ getUser((user) => {
 
 let data;
 
-const movieArray = ["tt7286456","tt1302006"]; //Arrays de los IMDB ID de las películas de los quizz
+const movieArray = ["tt7286456","tt1302006","tt7653254","tt8404614","tt2584384",
+                    "tt7131622","tt8946378","tt8579674"]; //Arrays de los IMDB ID de las películas de los quizz
 
 // Generar el div de cada película
 const showMovies = (movies) => {
