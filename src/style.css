@@ -1,5 +1,6 @@
 .buttonQuizzes {
-    width: 200px;
+    width: 220px;
+    margin-top: 2%;
 }
 .headerImg {
 max-width: 100%;
@@ -17,6 +18,6 @@ max-width: 100%;
     margin: auto;
 }
 .botones {
-    max-width: 50%;
-
+    max-width: 70%;
 }
+
