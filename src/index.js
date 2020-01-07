@@ -6,10 +6,13 @@ const movieArray = ["tt7286456","tt1302006","tt7653254","tt8404614","tt7131622",
 
 // Generar el div de cada película
 const showMovies = (movies) => {
-    document.getElementById('answer').innerHTML = '';
+    const divAnswer = document.getElementById('answer');
+    divAnswer.innerHTML = '';
     document.getElementById('quizzes').innerHTML = '';
     data = movies;
     console.log(data)
+
+    // PREGUNTAS DE JOKER
     let questionsJoker = [
         {
             question: "¿En qué fecha se estrenó el Joker?",
@@ -48,44 +51,111 @@ const showMovies = (movies) => {
         }
     ];
 
+    // PREGUNTAS DE THE IRISHMAN
+    let questionsIrishman = [
+        {
+            question: "¿En qué fecha se estrenó The Irishman?",
+            answers: [{ans:"05 Ago 2019", isRight: false}, 
+                    {ans: "13 Mar 2019", isRight: false}, 
+                    {ans: data.Released, isRight: true}, 
+                    {ans:"10 Sep 2019", isRight: false}]
+        },
+        {
+            question: "¿Quién escribió el guión de la película The Irishman?",
+            answers: [{ans: data.Writer, isRight: true}, 
+                    {ans: "Noah Baumbach.", isRight: false}, 
+                    {ans: "Anthony McCarten", isRight: false}, 
+                    {ans:"Vladislav Kozlov", isRight: false}]
+        },
+        {
+            question: "¿Qué tipo de género es?",
+            answers: [{ans: "Comedia", isRight: false}, 
+                    {ans: "Crimen", isRight: false}, 
+                    {ans: data.Genre, isRight: true}, 
+                    {ans:"Todas las anteriores", isRight: false}]
+        },
+        {
+            question: " ¿País de origen de la película?",
+            answers: [{ans: "Inglaterra", isRight: false}, 
+                    {ans: "Chile", isRight: false}, 
+                    {ans: "España", isRight: false}, 
+                    {ans: data.Country, isRight: true}]
+        },
+        {
+            question: "¿Cómo se llama el actor principal de The Irishman?",
+            answers: [{ans: "Anthony Hopkins", isRight: false}, 
+                    {ans: "Sidney Cole", isRight: false}, 
+                    {ans: data.Actors, isRight: true}, 
+                    {ans:"Anthony McCarten", isRight: false}]
+        }
+    ];
+
     let title = data.Title;
     let posterurl =data.Poster;
-    
-    if (data.imdbID == "tt7286456") {
-    const card = document.createElement('div');
+    let score = 0;
+
+    // Función que genera los Quizes y te da los resultados
+    function newQuiz (arrayOf) {
+        const card = document.createElement('div');
     card.classList.add('card-style');
     card.innerHTML = `<img class="cover-quizzes" src=' ${posterurl}'>
-                      <h3>${title}</h3>
-                      <h4>Preguntas</h4>`
+                    <h3>${title}</h3>
+                    <h4>Preguntas</h4>`
     const questionsPart = document.createElement('div');
     let allQuestions = '';
-    for (let i = 0, len = questionsJoker.length; i < len; i++) {
     
-    let eachQuestions = 
-            `<p>${questionsJoker[i].question}</p>
-            <button>${questionsJoker[i].answers[0].ans}</button>
-            <button>${questionsJoker[i].answers[1].ans}</button>
-            <button>${questionsJoker[i].answers[2].ans}</button>
-            <button>${questionsJoker[i].answers[3].ans}</button>`;
+    // Recorre cada pregunta del array de preguntas de la película
+    for (let i = 0, len = arrayOf.length; i < len; i++) {
+        let eachQuestions = 
+            `<form id=${i}><br>
+            <p>${arrayOf[i].question}</p>
+            <input type="radio" name="ansJ" value=${arrayOf[i].answers[0].isRight}>${arrayOf[i].answers[0].ans}<br>
+            <input type="radio" name="ansJ" value=${arrayOf[i].answers[1].isRight}>${arrayOf[i].answers[1].ans}<br>
+            <input type="radio" name="ansJ" value=${arrayOf[i].answers[2].isRight}>${arrayOf[i].answers[2].ans}<br>
+            <input type="radio" name="ansJ" value=${arrayOf[i].answers[3].isRight}>${arrayOf[i].answers[3].ans}
+            </form><br>`;
         allQuestions = allQuestions + eachQuestions;
-
     }
+    const submitAnswer = document.createElement('div');
+    submitAnswer.innerHTML = `<button id="buttonResults">Enviar</button>`;
+
     questionsPart.innerHTML = allQuestions;
     document.getElementById('answer').appendChild(card);
     document.getElementById('answer').appendChild(questionsPart);
+    document.getElementById('answer').appendChild(submitAnswer);
 
+    // El evento del botón de Enviar y que te da los resultados
+    document.getElementById('buttonResults').addEventListener('click', () => {
+        let newResults = document.getElementsByName('ansJ');
+        for (let i = 0; i < newResults.length; i++) {
+            if (newResults[i].checked == true && newResults[i].value == "true") {
+                score += 1;
+            }
+        };
+        console.log(score)
+        divAnswer.innerHTML = '';
+        if (score == 5) {
+            divAnswer.innerHTML = `<h3>¡Felicitaciones! 
+                                    <h4>Has acertado ${score} de 5</h4>
+                                    <h5>Has ganado 2 entradas al cine</h5>
+                                    <h5>para ver tu película favorita</h5>
+                                    <p>Guarda este códico QR y preséntalo en las bolterías</p>
+                                    <img src=images/qr_img.png>`
+        } else {
+            divAnswer.innerHTML = `<h3>Perdiste</h4>
+                                    <h4>Has acertado ${score} de 5</h4>
+                                    <h5>Pero sigue intentándolo</h5>
+                                    <p>Participa de nuevo por tus entradas de regalo</p>
+                                    <a id="restart" href="index.html">Volver a intentarlo</a>`
+        }
+    });
+    }
+
+    // Condicionales para saber que película clickeó y qué quiz mostrar
+    if (data.imdbID == "tt7286456") {
+        return newQuiz(questionsJoker);
     } else if (data.imdbID == "tt1302006") {
-        const card = document.createElement('div');
-        card.classList.add('card-style');
-        card.innerHTML = `<img class="cover-quizzes" src=' ${posterurl}'>
-                          <h3>${title}</h3>
-                          <h4>Preguntas</h4>
-                          <p>${questionsJoker[0].question}</p>
-                          <button>${questionsJoker[0].answers[0].ans}</button>
-                          <button>${questionsJoker[0].answers[1].ans}</button>
-                          <button>${questionsJoker[0].answers[2].ans}</button>
-                          <button>${questionsJoker[0].answers[3].ans}</button>`;
-        document.getElementById('answer').appendChild(card);
+        return newQuiz(questionsIrishman);
     };
     
 };
