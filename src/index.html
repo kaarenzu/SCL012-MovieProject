@@ -10,17 +10,57 @@
   </head>
   
   <body>
-    <div id="root">
-        <h1>Hola mundo</h1>
-        <div id="quizzes">
-            <img src="images/joker.png" id="buttonJoker" class="buttonQuizzes">
-            <img src="images/irishman.png" id="buttonIrishman" class="buttonQuizzes">
-            <img src="images/marriage-story.png" id="buttonMarriage" class="buttonQuizzes">
-            <img src="images/two-popes.png" id="buttonPopes" class="buttonQuizzes">
-            <img src="images/once-upon.png" id="buttonOnce" class="buttonQuizzes">
-            <img src="images/knives-out.png" id="buttonKnives" class="buttonQuizzes">
-            <img src="images/parasite.png" id="buttonParasite" class="buttonQuizzes">
-            <img src="images/1917.png" id="button1917" class="buttonQuizzes">
+    <header> 
+      <img src="images/header.png" class="headerImg">   
+    </header>
+    <div class="intro">
+      <div class="headerText">Camino al Oscar 2020...</div> <div class="headerText2">Participa de la trivia y gana 2 entradas a la peli que mas te guste</div>
+    </div>
+    <div id="root" class="container">
+        
+        <div id="quizzes" class="row">
+            <div class="col-md-3"id="buttonJoker">
+              <img src="images/joker.png" class="buttonQuizzes">
+              <img src="images/ticket.jpg"  class="botones">
+            </div>
+
+            <div class="col-md-3" id="buttonIrishman">
+              <img src="images/irishman.png" class="buttonQuizzes">
+              <img src="images/ticket.jpg"  class="botones">
+            </div>
+            
+            <div class="col-md-3"id="buttonMarriage">
+              <img src="images/marriage-story.png" class="buttonQuizzes">
+              <img src="images/ticket.jpg"  class="botones">
+            </div>
+
+            <div class="col-md-3" id="buttonPopes" >
+              <img src="images/two-popes.png"  class="buttonQuizzes">
+              <img src="images/ticket.jpg"  class="botones">
+           </div>
+
+           <div class="col-md-3" id="buttonOnce">
+            <img src="images/once-upon.png"  class="buttonQuizzes">
+            <img src="images/ticket.jpg"  class="botones">
+             
+           </div>
+            
+           <div class="col-md-3" id="buttonKnives">
+            <img src="images/knives-out.png"  class="buttonQuizzes">
+            <img src="images/ticket.jpg"  class="botones">
+
+           </div>
+           
+           <div class="col-md-3"id="buttonParasite">
+            <img src="images/parasite.png"  class="buttonQuizzes">
+            <img src="images/ticket.jpg"  class="botones">
+           </div>
+
+            <div class="col-md-3" id="button1917" >
+              <img src="images/1917.png" class="buttonQuizzes">
+              <img src="images/ticket.jpg"  class="botones">
+            </div>  
+            
         </div>
         
         <div id="answer"></div>

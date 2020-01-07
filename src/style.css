@@ -1,3 +1,22 @@
 .buttonQuizzes {
     width: 200px;
 }
+.headerImg {
+max-width: 100%;
+}
+.intro {
+    background: #727070;
+    display: flex;
+}
+.headerText {
+    color: aliceblue;
+    margin: auto;
+}
+.headerText2 {
+    color: antiquewhite;
+    margin: auto;
+}
+.botones {
+    max-width: 50%;
+
+}
