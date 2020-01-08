@@ -335,8 +335,11 @@ const showMovies = (movies) => {
     function newQuiz (arrayOf) {
         const card = document.createElement('div');
     card.classList.add('card-style');
-    card.innerHTML = `<h3>${title}</h3>
-                     <img class="cover-quizzes" src=' ${posterurl}'>`
+    card.innerHTML = `<section id="cover">
+                     <h3>${title}</h3>
+                     <img class="cover-quizzes" src=' ${posterurl}'>
+                     </section>
+                     <div id="sec-questions" class="sec-ques">`
     const questionsPart = document.createElement('div');
     let allQuestions = '';
     
@@ -353,7 +356,8 @@ const showMovies = (movies) => {
         allQuestions = allQuestions + eachQuestions;
     }
     const submitAnswer = document.createElement('div');
-    submitAnswer.innerHTML = `<button id="buttonResults">Enviar</button>`;
+    submitAnswer.innerHTML = `<button id="buttonResults">Enviar</button>
+                              </div>`;
 
     questionsPart.innerHTML = allQuestions;
     document.getElementById('answer').appendChild(card);
