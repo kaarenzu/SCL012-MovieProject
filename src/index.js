@@ -330,38 +330,37 @@ const showMovies = (movies) => {
     let posterurl =data.Poster;
     let score = 0;
 
-    // Función que genera los Quizes y te da los resultados
+    // Función que genera los Quizzes y te da los resultados
     function newQuiz (arrayOf) {
         const card = document.createElement('div');
-    card.classList.add('card-style');
-    card.innerHTML = `<section id="cover">
-                     <h3>${title}</h3>
-                     <img class="cover-quizzes" src=' ${posterurl}'>
-                     </section>
-                     <div id="sec-questions" class="sec-ques">`
-    const questionsPart = document.createElement('div');
-    let allQuestions = '';
+        card.classList.add('card-style');
+        card.innerHTML = `<img class="cover-quizzes" src=' ${posterurl}'>`
+        
+        const questionsPart = document.createElement('div');
+        questionsPart.classList.add('divQA');
+        //questionsPart.classList.add('col-sm-5');
+        let allQuestions = '';
     
-    // Recorre cada pregunta del array de preguntas de la película
-    for (let i = 0, len = arrayOf.length; i < len; i++) {
-        let eachQuestions = 
-            `<form id=${i}><br>
-            <p>${arrayOf[i].question}</p>
-            <input type="radio" name="ansJ" value=${arrayOf[i].answers[0].isRight}>${arrayOf[i].answers[0].ans}<br>
-            <input type="radio" name="ansJ" value=${arrayOf[i].answers[1].isRight}>${arrayOf[i].answers[1].ans}<br>
-            <input type="radio" name="ansJ" value=${arrayOf[i].answers[2].isRight}>${arrayOf[i].answers[2].ans}<br>
-            <input type="radio" name="ansJ" value=${arrayOf[i].answers[3].isRight}>${arrayOf[i].answers[3].ans}
-            </form><br>`;
-        allQuestions = allQuestions + eachQuestions;
-    }
-    const submitAnswer = document.createElement('div');
-    submitAnswer.innerHTML = `<button id="buttonResults">Enviar</button>
-                              </div>`;
+        // Recorre cada pregunta del array de preguntas de la película
+        for (let i = 0, len = arrayOf.length; i < len; i++) {
+            let eachQuestions = 
+                `<form id=${i}><br>
+                <p class="text-questions">${arrayOf[i].question}</p>
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[0].isRight}>${arrayOf[i].answers[0].ans}<br>
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[1].isRight}>${arrayOf[i].answers[1].ans}<br>
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[2].isRight}>${arrayOf[i].answers[2].ans}<br>
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[3].isRight}>${arrayOf[i].answers[3].ans}
+                </form><br>`;
+            allQuestions = allQuestions + eachQuestions;
+        }
+        const submitAnswer = document.createElement('div');
+        submitAnswer.classList.add('summitDiv')
+        submitAnswer.innerHTML = `<button class="btn btn-danger" id="buttonResults" class="btn btn-warning">Enviar</button>`;
 
-    questionsPart.innerHTML = allQuestions;
-    document.getElementById('answer').appendChild(card);
-    document.getElementById('answer').appendChild(questionsPart);
-    document.getElementById('answer').appendChild(submitAnswer);
+        questionsPart.innerHTML = allQuestions;
+        document.getElementById('answer').appendChild(card);
+        document.getElementById('answer').appendChild(questionsPart);
+        document.getElementById('answer').appendChild(submitAnswer);
 
     // El evento del botón de Enviar y que te da los resultados
     document.getElementById('buttonResults').addEventListener('click', () => {
@@ -372,6 +371,7 @@ const showMovies = (movies) => {
             }
         };
         divAnswer.innerHTML = '';
+        divAnswer.style.display = 'inline';
         
         if (score == 5) {
             divAnswer.innerHTML = `<div class ='premio'>
