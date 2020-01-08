@@ -14,7 +14,7 @@
 
  # **Preámbulo**
 
- Con motivo de celebrar su aniversario, una cadena de Cines quiere regalar entradas para ver una película, pero para conseguirlas, los clientes deben responder 5 preguntas sobre una película a elección de las 8 sugeridas. En caso de ganar, se generará un código QR que se deberá descargar para luego ser canjeado en las boleterias del cine. En caso de perder, se le brindará el cliente la posibilidad de volver a elegir una película para volver a jugar.
+ A todos nos gusta ir a mirar una buena película al cine, principalmente si es gratis. Es por esto que una cadena de cines se propuso regalar entradas para que algunos afortunados puedan disfrutar de una película a elección y probar sus nuevas salas. Pero para ello, deberás demostrar cuanto sabes de los últimos estrenos.
 
  # **Diseño**
 
@@ -86,8 +86,11 @@ Al realizar los testeo surgieron puntos a mejorar:
 # **Tareas asignadas**
 
 * Maria Jesús Oliva Palacios: Redacción de preguntas.
-* Bárbara Di Niscia:
-* Karen Zuñiga Cortes:
-* Vanesa Gonzalez: 
+* Bárbara Di Niscia y Karen Zuñiga Cortes: Git, GitHub,js, HTML, CSS, implementación de Bootstrap.
+* Vanesa Gonzalez: Git, GitHub, Trello, encuestas, diseño, prototipos, iteración, test de usabilidad, readme.
 
 # **Conclusión**
+
+Nuestra problemática era sobre cómo podía, una cadena de cines, atraer clientes para que conozcan sus nuevas salas.
+Para lograr este objetivo y aprovechando que se acercaba la fecha de su aniversario se propuso regalar entradas. Con este objetivo en mente, decidimos crear una trivia donde los participantes puedan ganar 2 entradas para ir al cine respondiendo 5 preguntas sobre la película que elijan de las sugeridas. En caso de ganar, se genera un código QR que se deberá descargar para luego ser canjeado en las boleterias del cine. En caso de perder, se le brindará al cliente la posibilidad de volver a jugar.
+Finalmente se cumple el objetivo dando al usuario una lista de 8 películas sobre las cuales puede jugar.
