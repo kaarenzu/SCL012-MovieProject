@@ -75,7 +75,7 @@ const showMovies = (movies) => {
                     {ans:"Todas las anteriores", isRight: false}]
         },
         {
-            question: " ¿País de origen de la película?",
+            question: "¿País de origen de la película?",
             answers: [{ans: "Inglaterra", isRight: false}, 
                     {ans: "Chile", isRight: false}, 
                     {ans: "España", isRight: false}, 
@@ -89,6 +89,47 @@ const showMovies = (movies) => {
                     {ans:"Anthony McCarten", isRight: false}]
         }
     ];
+
+        // PREGUNTAS DE THE MARRIAGE STORY
+        let questionsMarriage = [
+            {
+                question: "¿En qué fecha se estrenó Marriage Story?",
+                answers: [{ans:"11 Oct 2019", isRight: false}, 
+                        {ans: "20 Dic 2019", isRight: false}, 
+                        {ans: "07 Nov 2019", isRight: false}, 
+                        {ans: data.Released, isRight: true}]
+            },
+            {
+                question: "¿Cómo se llama el director de la película Marriage Story?",
+                answers: [{ans:  "David Lynch", isRight: false}, 
+                        {ans: data.Director, isRight: true}, 
+                        {ans: "Steven Soderbergh", isRight: false}, 
+                        {ans:"Ninguna de las Anteriores", isRight: false}]
+            },
+            {
+                question: "¿Quiénes protagonizan de la película Marriage Story?",
+                answers: [{ans: "Anthony Hopkins,Meryl Streep", isRight: false}, 
+                        {ans: "Julia Roberts,Joseph Gordon-Levitt", isRight: false}, 
+                        {ans: "Benedict Cumberbatch,Charlize Theron", isRight: false}, 
+                        {ans: data.Actors, isRight: true}]
+            },
+            {
+                question: "¿Cuál es el país de origen de la película Marriage Story? ",
+                answers: [{ans: "México", isRight: false}, 
+                        {ans: "Francia", isRight: false}, 
+                        {ans: "Canadá", isRight: false}, 
+                        {ans: data.Country, isRight: true}]
+            },
+            {
+                question: "¿Cuál es el tiempo de duración de la película?",
+                answers: [{ans: "150 min", isRight: false}, 
+                        {ans: data.Runtime, isRight: true}, 
+                        {ans: "185 min", isRight: false}, 
+                        {ans:"122 min", isRight: false}]
+            }
+        ];
+
+    
 
     let title = data.Title;
     let posterurl =data.Poster;
@@ -156,6 +197,8 @@ const showMovies = (movies) => {
         return newQuiz(questionsJoker);
     } else if (data.imdbID == "tt1302006") {
         return newQuiz(questionsIrishman);
+    } else if (data.imdbID == "tt7653254") {
+        return newQuiz(questionsMarriage);
     };
     
 };
