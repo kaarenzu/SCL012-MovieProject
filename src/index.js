@@ -345,7 +345,7 @@ const showMovies = (movies) => {
         for (let i = 0, len = arrayOf.length; i < len; i++) {
             let eachQuestions = 
                 `<form id=${i}><br>
-                <p>${arrayOf[i].question}</p>
+                <p class="text-questions">${arrayOf[i].question}</p>
                 <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[0].isRight}>${arrayOf[i].answers[0].ans}<br>
                 <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[1].isRight}>${arrayOf[i].answers[1].ans}<br>
                 <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[2].isRight}>${arrayOf[i].answers[2].ans}<br>
@@ -355,7 +355,7 @@ const showMovies = (movies) => {
         }
         const submitAnswer = document.createElement('div');
         submitAnswer.classList.add('summitDiv')
-        submitAnswer.innerHTML = `<button class="btn btn-danger" class="btn btn-warning">Enviar</button>`;
+        submitAnswer.innerHTML = `<button class="btn btn-danger" id="buttonResults" class="btn btn-warning">Enviar</button>`;
 
         questionsPart.innerHTML = allQuestions;
         document.getElementById('answer').appendChild(card);

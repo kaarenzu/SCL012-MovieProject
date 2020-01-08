@@ -99,11 +99,11 @@ max-width: 100%;
 }
 .form-radio:hover
 {
-     background-color: #f7f7f7;
+     background-color: #e2e2e2;
 }
 .form-radio:checked
 {
-     background-color: #f1f1f1;
+     background-color: #e2e2e2;
 }
 label
 {
@@ -114,4 +114,8 @@ label
      cursor: pointer;
 } 
 
+.text-questions {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
 
