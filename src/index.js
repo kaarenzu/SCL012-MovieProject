@@ -129,6 +129,202 @@ const showMovies = (movies) => {
             }
         ];
 
+           // PREGUNTAS THE TWO POPES
+           let questionsTwoPopes = [
+            {
+                question: "Actuó en la película The Two Popes:",
+                answers: [{ans:"Jonathan Pryce", isRight: false}, 
+                        {ans: "Anthony Hopkins", isRight: false}, 
+                        {ans: "Juan Minujín", isRight: false}, 
+                        {ans: "Todas las Anteriores", isRight: true}]
+            },
+            {
+                question: "The Two Popes se estrenó en : ",
+                answers: [{ans:  "20 de Octubre del 2019", isRight: false}, 
+                        {ans: "21 de Diciembre del 2019" ,isRight: false}, 
+                        {ans: data.Released, isRight: true}, 
+                        {ans:"30 de Noviembre del 2019", isRight: false}]
+            },
+            {
+                question: "¿Cómo se llama el escritor de la pelicula The Two Popes?",
+                answers: [{ans: data.Writer, isRight: true}, 
+                        {ans: "Fernando Meirelles", isRight: false}, 
+                        {ans: "Rian Johnson", isRight: false}, 
+                        {ans: "Ninguna de las Anteriores", isRight: false}]
+            },
+            {
+                question: "¿De qué tipo de género es la película? ",
+                answers: [{ans: "Comedia", isRight: false}, 
+                        {ans: "Biografía", isRight: false}, 
+                        {ans: "Drama", isRight: false}, 
+                        {ans: "Todas las Anteriores", isRight: true}]
+            },
+            {
+                question: "¿Cuánto tiempo tiene de duracion en total la película?",
+                answers: [{ans: "100 min", isRight: false}, 
+                        {ans: "120 min", isRight: false}, 
+                        {ans: data.Runtime, isRight: true}, 
+                        {ans:"150 min", isRight: false}]
+            }
+        ];
+
+          // PREGUNTAS DE Once upon a time in hollywood
+          let questionsOnceUpon = [
+            {
+                question: "¿Qué calificación po edad tiene esta pelicula?",
+                answers: [{ans:"PG- 13", isRight: false}, 
+                        {ans: data.Rated, isRight: true}, 
+                        {ans: "PG", isRight: false}, 
+                        {ans: "G", isRight: false}]
+            },
+            {
+                question: "Nombre del director y escritor de la película ",
+                answers: [{ans:  "Bob Kane", isRight: false}, 
+                        {ans: "Leonardo DiCaprio" ,isRight: false}, 
+                        {ans: data.Director, isRight: true}, 
+                        {ans:"Sam Mendes", isRight: false}]
+            },
+            {
+                question: "¿Cómo se llama la productora de la película?",
+                answers: [{ans: "Universal Pictures" , isRight: false}, 
+                        {ans: "Warner Bros, Pictures", isRight: false}, 
+                        {ans: "Dreamworks", isRight: false}, 
+                        {ans: data.Production, isRight: true}]
+            },
+            {
+                question: "Su actor principal es : ",
+                answers: [{ans: "Robert de Niro", isRight: false}, 
+                        {ans: data.Actors, isRight: true}, 
+                        {ans: "Bob Kane", isRight: false}, 
+                        {ans: "Thomasin Mckenzie", isRight: false}]
+            },
+            {
+                question: "¿Cuánto tiempo tiene de duracion en total la película?",
+                answers: [{ans: "110 min", isRight: false}, 
+                        {ans: "120 min", isRight: false}, 
+                        {ans: data.Runtime, isRight: true}, 
+                        {ans:"150 min", isRight: false}]
+            }
+        ];
+
+         // PREGUNTAS DE Knives Out
+         let questionsKnivesOut = [
+            {
+                question: "¿Cuál es el nombre su director?",
+                answers: [{ans: data.Director, isRight: true}, 
+                        {ans: "Sam Mendes", isRight: false}, 
+                        {ans: "Bob Kane", isRight: false}, 
+                        {ans: "Thomasin McKenzie", isRight: false}]
+            },
+            {
+                question: "El país de origen de esta película es : ",
+                answers: [{ans:  "Canadá", isRight: false}, 
+                        {ans: "UK" ,isRight: false}, 
+                        {ans: data.Country, isRight: true}, 
+                        {ans:"Alemania", isRight: false}]
+            },
+            {
+                question: "¿De que género es esta película?",
+                answers: [{ans: "Comedia" , isRight: false}, 
+                        {ans: "Drama", isRight: false}, 
+                        {ans: "Misterio", isRight: false}, 
+                        {ans: data.Genre, isRight: true}]
+            },
+            {
+                question: "¿Que actriz participa en esta película? ",
+                answers: [{ans: "Scarlett Johansson", isRight: false}, 
+                        {ans: "Nina Parker", isRight: false }, 
+                        {ans: data.Actors, isRight: true}, 
+                        {ans: "Julia Roberts", isRight: false}]
+            },
+            {
+                question: "¿Qué calificación tiene por edad?",
+                answers: [{ans: data.Rated, isRight: true}, 
+                        {ans: "R", isRight: false}, 
+                        {ans: "PG", isRight: false}, 
+                        {ans:"G", isRight: false}]
+            }
+        ];
+
+        // PREGUNTAS DE PARASITE
+        let questionsParasite = [
+            {
+                question: "¿Cuál es el nombre de la productora de la película?",
+                answers: [{ans: data.Production, isRight: true}, 
+                        {ans: "Netflix", isRight: false}, 
+                        {ans: "Universal Pictures", isRight: false}, 
+                        {ans: "Ninguna de las anteriores", isRight: false}]
+            },
+            {
+                question: " Actuó en la pelicula Parasite: ",
+                answers: [{ans:  "Kang-ho Song", isRight: false}, 
+                        {ans: "Sun-kyun Lee" ,isRight: false}, 
+                        {ans: "Yeo-jeong Jo", isRight: false}, 
+                        {ans:"Todas las Anteriores", isRight: true}]
+            },
+            {
+                question: "¿Cuál es el tiempo de duración de Parasite?",
+                answers: [{ans: "150 min" , isRight: false}, 
+                        {ans: data.Runtime, isRight: true}, 
+                        {ans: "120 min", isRight: false}, 
+                        {ans: "60 min", isRight: false}]
+            },
+            {
+                question: "¿En qué fecha se estrenó la película? ",
+                answers: [{ans: data.Released, isRight: true}, 
+                        {ans: "10 de Noviembre del 2019", isRight: false }, 
+                        {ans: "8 de Diciembre del 2019", isRight: false}, 
+                        {ans: "10 de Mayo del 2019", isRight: false}]
+            },
+            {
+                question: "¿Cómo se llama el director de Parasite?",
+                answers: [{ans: "Fernando Meirelles", isRight: false}, 
+                        {ans: "Rian Johnson", isRight: false}, 
+                        {ans: "Sun-kyun Lee", isRight: false}, 
+                        {ans: data.Director, isRight: true}]
+            }
+        ];
+
+        // PREGUNTAS DE 1917
+        let quiestions1917 = [
+            {
+                question: "¿De qué país es la película 1917?",
+                answers: [{ans: "USA", isRight: false}, 
+                        {ans: "Canadá", isRight: false}, 
+                        {ans: "UK", isRight: false}, 
+                        {ans: "1 y 3", isRight: true}]
+            },
+            {
+                question: " ¿Quien es el director y a su vez uno de los escritores? ",
+                answers: [{ans:  "Robert de Niro", isRight: false}, 
+                        {ans: data.Director ,isRight: true}, 
+                        {ans: "Mark Strong", isRight: false}, 
+                        {ans:"Bob Kane", isRight: false}]
+            },
+            {
+                question: "¿Quién participa en el elenco?",
+                answers: [{ans: data.Actors , isRight: true}, 
+                        {ans: "Roman Griffin Davis", isRight: false}, 
+                        {ans: "Thomasin McKenzie", isRight: false}, 
+                        {ans: "Merritt Wever", isRight: false}]
+            },
+            {
+                question: "¿A qué género corresponde 1917? ",
+                answers: [{ans: "Infantil" , isRight: false}, 
+                        {ans: "Comedia", isRight: false }, 
+                        {ans: data.Genre, isRight: true}, 
+                        {ans: "Thriller", isRight: false}]
+            },
+            {
+                question: "¿Qué clasificación por edad tiene?",
+                answers: [{ans: "PG- 13", isRight: false}, 
+                        {ans: data.Rated, isRight: true}, 
+                        {ans: "PG", isRight: false}, 
+                        {ans: "G", isRight: false}]
+            }
+        ];
+
+
     
 
     let title = data.Title;
@@ -194,11 +390,28 @@ const showMovies = (movies) => {
     // Condicionales para saber que película clickeó y qué quiz mostrar
     if (data.imdbID == "tt7286456") {
         return newQuiz(questionsJoker);
-    } else if (data.imdbID == "tt1302006") {
+    } 
+    else if (data.imdbID == "tt1302006") {
         return newQuiz(questionsIrishman);
-    } else if (data.imdbID == "tt7653254") {
+    }
+     else if (data.imdbID == "tt7653254") {
         return newQuiz(questionsMarriage);
-    };
+    }
+    else if (data.imdbID == "tt8404614"){
+        return newQuiz(questionsTwoPopes);
+    }
+    else if (data.imdbID == "tt7131622"){
+        return newQuiz(questionsOnceUpon);
+    }
+    else if (data.imdbID == "tt8946378"){
+        return newQuiz(questionsKnivesOut);
+    }
+    else if (data.imdbID == "tt6751668"){
+        return newQuiz(questionsParasite);
+    }
+    else if (data.imdbID == "tt8579674"){
+        return newQuiz(quiestions1917);
+    }
     
 };
 
@@ -235,9 +448,27 @@ popesQuiz.addEventListener('click' , (e) => {
     e.preventDefault();
 });
 
+let onceQuiz = document.getElementById('buttonOnce');
+onceQuiz.addEventListener('click' , (e) => {
+    getAnswer(movieArray[4]);
+    e.preventDefault();
+});
 
+let knivesQuiz = document.getElementById('buttonKnives');
+knivesQuiz.addEventListener('click', (e) => {
+    getAnswer(movieArray[5]);
+});
 
+let parasiteQuiz = document.getElementById('buttonParasite');
+parasiteQuiz.addEventListener('click', (e) => {
+    getAnswer(movieArray[6]);
+});
 
+let quiz1917 = document.getElementById('button1917');
+quiz1917.addEventListener ('click', (e) => {
+    getAnswer(movieArray[7]);
+
+});
 
 
 
