@@ -1,5 +1,5 @@
 #root {
-    background-color: #f5f5f5;
+/*    background-color: #f5f5f5; */
 }
 .buttonQuizzes {
     width: 200px;
@@ -17,13 +17,13 @@ max-width: 100%;
 .headerText {
     color: #fff;
     margin: auto;
-    font-size: 1.2em;
+    font-size: 120%;
     font-family: 'Roboto', sans-serif;
 }
 .headerText2 {
     color: #fff;
     margin: auto;
-    font-size: 1em;
+    font-size: 90%;
     font-family: 'Roboto', sans-serif;
 }
 .botones {
@@ -35,6 +35,7 @@ max-width: 100%;
 .col-md-3 {
     align-self: center;
     text-align: center;
+    max-width: none !important;
 }
 
 .btn-warning {
@@ -48,5 +49,24 @@ max-width: 100%;
     margin: 10px;
     width: 10em;
     font-family: 'Roboto', sans-serif !important;
+}
+.card-style {
+    margin-top: 3em; 
+    padding: 3em;
+}
+
+.divQA {
+    margin-top: 2em; 
+    
+}
+
+.summitDiv {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#answer {
+    display: flex;
 }
 
