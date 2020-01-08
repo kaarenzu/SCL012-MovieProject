@@ -1,4 +1,3 @@
-console.log('Hola')
 
 let data;
 
@@ -372,8 +371,8 @@ const showMovies = (movies) => {
                 score += 1;
             }
         };
-        console.log(score)
         divAnswer.innerHTML = '';
+        
         if (score == 5) {
             divAnswer.innerHTML = `<h3>¡Felicitaciones! 
                                     <h4>Has acertado ${score} de 5</h4>
