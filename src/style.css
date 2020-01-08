@@ -1,5 +1,5 @@
 #root {
-   background-color: #f5f5f5;
+    background-color: #f5f5f5;
 }
 .buttonQuizzes {
     width: 200px;
@@ -17,13 +17,13 @@ max-width: 100%;
 .headerText {
     color: #fff;
     margin: auto;
-    font-size: 120%;
+    font-size: 1.2em;
     font-family: 'Roboto', sans-serif;
 }
 .headerText2 {
     color: #fff;
     margin: auto;
-    font-size: 90%;
+    font-size: 1em;
     font-family: 'Roboto', sans-serif;
 }
 .botones {
