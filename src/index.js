@@ -139,9 +139,8 @@ const showMovies = (movies) => {
     function newQuiz (arrayOf) {
         const card = document.createElement('div');
     card.classList.add('card-style');
-    card.innerHTML = `<img class="cover-quizzes" src=' ${posterurl}'>
-                    <h3>${title}</h3>
-                    <h4>Preguntas</h4>`
+    card.innerHTML = `<h3>${title}</h3>
+                     <img class="cover-quizzes" src=' ${posterurl}'>`
     const questionsPart = document.createElement('div');
     let allQuestions = '';
     

@@ -1,6 +1,10 @@
+#root {
+    background-color: #f5f5f5;
+}
 .buttonQuizzes {
-    width: 220px;
+    width: 200px;
     margin-top: 2%;
+    border-radius: 2%;
 }
 .headerImg {
 max-width: 100%;
@@ -8,16 +12,41 @@ max-width: 100%;
 .intro {
     background: #727070;
     display: flex;
+    height: 3em;
 }
 .headerText {
-    color: aliceblue;
+    color: #fff;
     margin: auto;
+    font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
 }
 .headerText2 {
-    color: antiquewhite;
+    color: #fff;
     margin: auto;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
 }
 .botones {
-    max-width: 70%;
+    max-width: 150px;
+    font-family: 'Open Sans', sans-serif;
+    display: block;
+}
+
+.col-md-3 {
+    align-self: center;
+    text-align: center;
+}
+
+.btn-warning {
+    background-color: #ffd564 !important;
+    border: none !important;
+    height: 4em;
+    background-image: radial-gradient(circle at center, white 3px, transparent 4px), radial-gradient(circle at center, white 3px, transparent 4px);
+    background-size: 14px 12px;
+    background-position: center -6px, center calc(100% + 6px); 
+    background-repeat: repeat-x;
+    margin: 10px;
+    width: 10em;
+    font-family: 'Roboto', sans-serif !important;
 }
 
