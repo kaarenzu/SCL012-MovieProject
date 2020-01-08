@@ -4,7 +4,7 @@
 .buttonQuizzes {
     width: 200px;
     margin-top: 2%;
-    border-radius: 2%;
+    border-radius: 4%;
 }
 .headerImg {
 max-width: 100%;
@@ -53,6 +53,7 @@ max-width: 100%;
 
 .confetis {
     max-width: 20%;
+}
 
 .card-style {
     margin-top: 3em; 
