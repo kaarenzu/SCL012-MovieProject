@@ -23,14 +23,17 @@ Para el estilo que le íbamos a dar a este este proyecto era necesario seguir co
 Para saber que tipo de preguntas incluir en el juego, se hizo una encuenta para determinar el rango de edad de las personas que asisten con mayor frecuencia al cine y que información les interesa más al momento de elegir que película mirar.
 
 ![alt text](/src/images/encuesta/respuestas1.png)
+
 El rango de edad de las personas que asisten al cine con mayor frecuencia es de 34 a 40.
 
 ![alt text](/src/images/encuesta/respuestas2.png)
 
 ![alt text](/src/images/encuesta/respuestas3.png)
+
 Si bien la mayoría de las personas encuestadas dijeron que hace tiempo no van al cine, hay otro gran número que va al menos 2 veces al mes.
 
 ![alt text](/src/images/encuesta/respuestas4.png)
+
 La mayoría de las personas  elige una película basada en el genero y en sus protagonistas.
 
 # Apreciaciones 
