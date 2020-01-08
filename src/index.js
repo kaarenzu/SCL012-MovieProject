@@ -346,10 +346,10 @@ const showMovies = (movies) => {
             let eachQuestions = 
                 `<form id=${i}><br>
                 <p>${arrayOf[i].question}</p>
-                <input type="radio" name="ansJ" value=${arrayOf[i].answers[0].isRight}>${arrayOf[i].answers[0].ans}<br>
-                <input type="radio" name="ansJ" value=${arrayOf[i].answers[1].isRight}>${arrayOf[i].answers[1].ans}<br>
-                <input type="radio" name="ansJ" value=${arrayOf[i].answers[2].isRight}>${arrayOf[i].answers[2].ans}<br>
-                <input type="radio" name="ansJ" value=${arrayOf[i].answers[3].isRight}>${arrayOf[i].answers[3].ans}
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[0].isRight}>${arrayOf[i].answers[0].ans}<br>
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[1].isRight}>${arrayOf[i].answers[1].ans}<br>
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[2].isRight}>${arrayOf[i].answers[2].ans}<br>
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[3].isRight}>${arrayOf[i].answers[3].ans}
                 </form><br>`;
             allQuestions = allQuestions + eachQuestions;
         }
