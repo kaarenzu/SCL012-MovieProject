@@ -1,6 +1,6 @@
 # SCL012-MovieProject
 
- ## Índice
+ # Índice
 
 * [Preámbulo](#preámbulo)
 * [Diseño](#diseño)
@@ -12,11 +12,11 @@
 
  ***
 
- ## **Preámbulo**
+ # **Preámbulo**
 
  Con motivo de celebrar su aniversario, una cadena de Cines quiere regalar entradas para ver una película, pero para conseguirlas, los clientes deben responder 5 preguntas sobre una película a elección de las 8 sugeridas. En caso de ganar, se generará un código QR que se deberá descargar para luego ser canjeado en las boleterias del cine. En caso de perder, se le brindará el cliente la posibilidad de volver a elegir una película para volver a jugar.
 
- ## **Diseño**
+ # **Diseño**
 
 Para el estilo que le íbamos a dar a este este proyecto era necesario seguir con el diseño de la página principal del cine. Para ello hicimos uso del encabezado de la página que incluye el logo con el nombre del cine y los colores usados en el sitio, como el blanco para el fondo y amarillo para los botones, este último, con un tono fuerte para generar contraste.
 
@@ -36,10 +36,10 @@ Si bien la mayoría de las personas encuestadas dijeron que hace tiempo no van a
 
 La mayoría de las personas  elige una película basada en el genero y en sus protagonistas.
 
-# Apreciaciones 
+## Apreciaciones 
 Esta información nos sirvió para determinar los temas sobre los que se formularán las preguntas y a que tipo de clientes van a ir dirigidas.
 
-## **Historias de usuario**
+# **Historias de usuario**
 
 ![alt text](/src/images/persona.png)
 
@@ -47,42 +47,42 @@ Basadas en este "User Persona" creamos nuestras historias de usuario y planifica
 
 Trello : https://trello.com/b/LCbtM6K5/ultimo-proyecto
 
-## **Diseño de interfaz**
+# **Diseño de interfaz**
 
 Realizamos prototipos para versión escritorio. A continuación mostramos imágenes y links con cada prototipo del proyecto.
 
-# Sketch 
+## Sketch 
 
 ![alt text](/src/images/prototipos/sketch1.jpg)
 ![alt text](/src/images/prototipos/sketch2.jpg)
 ![alt text](/src/images/prototipos/sketch3.jpg)
 
-# Wireframe
+## Wireframe
 
 ![alt text](/src/images/prototipos/wireframe.png)
 
 https://www.figma.com/file/zIRdGpfIlnTGO0aWIgUFiU/Baja-fidelidad---MovieProject
 
-# Prototipo de alta fidelidad
+## Prototipo de alta fidelidad
 
 ![alt text](/src/images/prototipos/iteracion.png)
 
 https://www.figma.com/file/VLWqxIYpbj09C6yejOsdJx/Alta-fidelidad---MovieProject
 
 
-## **Test de usabilidad**
+# **Test de usabilidad**
 
 https://www.loom.com/share/1979b74805544ba88a51dc68fa4adb37
 
 https://www.loom.com/share/3bc402c89e814559ad5faeafee835c9b
 
-# Iteración
+## Iteración
 
 Al realizar los testeo surgieron puntos a mejorar:
 * El texto que invita a participar de la trivia no hace referencia a que deben seleccionar una película para empezar a jugar.
 * Además del botón de acceso al juego que contienen el nombre de la película, se decidió que al hacer click sobre la imagen también se pueda acceder a la trivia ya que la primer reacción de algunos usuarios fue clickear sobre ella en primer lugar. 
 
 
-## **Tareas asignadas**
+# **Tareas asignadas**
 
-## **Conclusión**
+# **Conclusión**
