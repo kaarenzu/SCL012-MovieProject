@@ -4,7 +4,7 @@
 .buttonQuizzes {
     width: 200px;
     margin-top: 2%;
-    border-radius: 3%;
+    border-radius: 2%;
 }
 .headerImg {
 max-width: 100%;
@@ -49,4 +49,14 @@ max-width: 100%;
     width: 10em;
     font-family: 'Roboto', sans-serif !important;
 }
+.confetis {
+    max-width: 20%;
+}
 
+.premio {
+    text-align: center;
+}
+.letras {
+    font-family: roboto;
+    font-size: x-large;
+}

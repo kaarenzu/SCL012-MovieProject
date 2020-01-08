@@ -1,4 +1,3 @@
-console.log('Hola')
 
 let data;
 
@@ -372,21 +371,23 @@ const showMovies = (movies) => {
                 score += 1;
             }
         };
-        console.log(score)
         divAnswer.innerHTML = '';
+        
         if (score == 5) {
-            divAnswer.innerHTML = `<h3>¡Felicitaciones! 
-                                    <h4>Has acertado ${score} de 5</h4>
-                                    <h5>Has ganado 2 entradas al cine</h5>
-                                    <h5>para ver tu película favorita</h5>
-                                    <p>Guarda este códico QR y preséntalo en las bolterías</p>
-                                    <img src=images/qr_img.png>`
+            divAnswer.innerHTML = `<div class ='premio'>
+                                    <h1 class = 'display-1'>¡Felicitaciones!</h1> <img src="images/confetiDos.jpeg" class="confetis"> 
+                                    <h4  class= 'letras'>Has acertado ${score} de 5</h4>
+                                    <h5  class= 'letras'>Has ganado 2 entradas al cine</h5>
+                                    <h5  class= 'letras'>para ver tu película favorita</h5>
+                                    <p  class= 'letras'>Guarda este código QR y preséntalo en las bolterías</p>
+                                    <img src=images/qr_img.png></div>`
         } else {
-            divAnswer.innerHTML = `<h3>Perdiste</h4>
-                                    <h4>Has acertado ${score} de 5</h4>
-                                    <h5>Pero sigue intentándolo</h5>
-                                    <p>Participa de nuevo por tus entradas de regalo</p>
-                                    <a id="restart" href="index.html">Volver a intentarlo</a>`
+            divAnswer.innerHTML = `<div class = 'premio'>
+                                    <h1 class = 'display-1'>Has estado cerca</h1><img src="images/emoji.png" class="confetis">
+                                    <h4 class= 'letras'> Acertaste ${score} de 5</h4>
+                                    <h5 class= 'letras'>Pero sigue intentándolo</h5>
+                                    <p class= 'letras'>Participa de nuevo por tus entradas de regalo</p>
+                                    <a id="restart" class= 'letras' href="index.html">Volver a intentarlo</a></div>`
         }
     });
     }
