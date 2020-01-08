@@ -85,4 +85,9 @@ Al realizar los testeo surgieron puntos a mejorar:
 
 # **Tareas asignadas**
 
+* Maria Jesús Oliva Palacios: Redacción de preguntas.
+* Bárbara Di Niscia:
+* Karen Zuñiga Cortes:
+* Vanesa Gonzalez: 
+
 # **Conclusión**
