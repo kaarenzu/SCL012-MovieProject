@@ -76,6 +76,8 @@ https://www.loom.com/share/1979b74805544ba88a51dc68fa4adb37
 
 https://www.loom.com/share/3bc402c89e814559ad5faeafee835c9b
 
+https://www.loom.com/share/e7d51f53c8994645be8e214473308714
+
 ## Iteración
 
 Al realizar los testeo surgieron puntos a mejorar:
