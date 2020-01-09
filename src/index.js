@@ -355,7 +355,8 @@ const showMovies = (movies) => {
         }
         const submitAnswer = document.createElement('div');
         submitAnswer.classList.add('summitDiv')
-        submitAnswer.innerHTML = `<button class="btn btn-danger" id="buttonResults" class="btn btn-warning">Enviar</button>`;
+        submitAnswer.innerHTML = `<button class="btn btn-danger" id="buttonResults" class="btn btn-warning">Enviar
+                                </button>`;
 
         questionsPart.innerHTML = allQuestions;
         document.getElementById('answer').appendChild(card);
@@ -375,12 +376,15 @@ const showMovies = (movies) => {
         
         if (score == 5) {
             divAnswer.innerHTML = `<div class ='premio'>
-                                    <h1 class = 'display-1'>¡Felicitaciones!</h1> <img src="images/confetiDos.jpeg" class="confetis"> 
+                                    <h1 class = 'display-1'>¡Felicitaciones!</h1>
                                     <h4  class= 'letras'>Has acertado ${score} de 5</h4>
                                     <h5  class= 'letras'>Has ganado 2 entradas al cine</h5>
                                     <h5  class= 'letras'>para ver tu película favorita</h5>
                                     <p  class= 'letras'>Guarda este código QR y preséntalo en las bolterías</p>
-                                    <img src=images/qr_img.png></div>`
+                                    <img src=images/qr_img.png></div>`;
+            confetti.start();
+            setTimeout(confetti.stop, 4000);
+
         } else {
             divAnswer.innerHTML = `<div class = 'premio'>
                                     <h1 class = 'display-1'>Has estado cerca</h1><img src="images/emoji.png" class="confetis">
