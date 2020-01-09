@@ -380,7 +380,7 @@ const showMovies = (movies) => {
                                     <h4  class= 'letras'>Has acertado ${score} de 5</h4>
                                     <h5  class= 'letras'>Has ganado 2 entradas al cine</h5>
                                     <h5  class= 'letras'>para ver tu película favorita</h5>
-                                    <p  class= 'letras p-little'>Guarda este código QR y preséntalo en las bolterías</p>
+                                    <p  class= 'letras p-little'>Guarda este código QR y preséntalo en las boleterías</p>
                                     <img src=images/qr_img.png></div>`;
             confetti.start();
             setTimeout(confetti.stop, 4000);
