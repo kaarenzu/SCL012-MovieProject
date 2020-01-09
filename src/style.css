@@ -1,35 +1,36 @@
-#root {
-    background-color: #f5f5f5;
-}
+
 .buttonQuizzes {
     width: 200px;
     margin-top: 2%;
-    border-radius: 2%;
+    border-radius: 4%;
+    -webkit-box-shadow: 0px 0px 12px 4px rgba(214,214,214,1);
+    -moz-box-shadow: 0px 0px 12px 4px rgba(214,214,214,1);
+    box-shadow: 0px 0px 12px 4px rgba(214,214,214,1);
 }
+
 .headerImg {
 max-width: 100%;
 }
+
 .intro {
     background: #727070;
     display: flex;
     height: 3em;
+    margin-bottom: 1em;
 }
+
 .headerText {
     color: #fff;
     margin: auto;
     font-size: 1.2em;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
+
 .headerText2 {
     color: #fff;
     margin: auto;
     font-size: 1em;
-    font-family: 'Roboto', sans-serif;
-}
-.botones {
-    max-width: 150px;
     font-family: 'Open Sans', sans-serif;
-    display: block;
 }
 
 .col-md-3 {
@@ -51,11 +52,8 @@ max-width: 100%;
     font-family: 'Roboto', sans-serif !important;
 }
 
-.confetis {
-    max-width: 20%;
-}
 .card-style {
-    margin-top: 3em; 
+    margin-top: 1em; 
     padding: 3em;
 }
 
@@ -68,14 +66,19 @@ max-width: 100%;
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    width: 12em;
+}
+
+#buttonResults {
+    margin-bottom: 2em;
 }
 
 #answer {
     display: flex;
 }
 
-.form-radio
-{
+/* Estilos de Input radio */
+.form-radio {
      -webkit-appearance: none;
      -moz-appearance: none;
      appearance: none;
@@ -117,9 +120,9 @@ label
      -moz-osx-font-smoothing: grayscale;
      cursor: pointer;
 } 
+/*Fin de estilos del input radio */
 
 .text-questions {
-    font-family: 'Open Sans', sans-serif;
     font-weight: bold;
 }
 
@@ -127,6 +130,52 @@ label
     text-align: center;
 }
 .letras {
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
     font-size: x-large;
+}
+
+.p-little{
+    font-size: 1.2em !important;
+}
+
+.btn-danger {
+    width: 8em !important;
+}
+
+.emoji {
+    width: 20%;
+}
+
+.cover-quizzes {
+    -webkit-box-shadow: 0px 0px 12px 4px rgba(214,214,214,1);
+    -moz-box-shadow: 0px 0px 12px 4px rgba(214,214,214,1);
+    box-shadow: 0px 0px 12px 4px rgba(214,214,214,1);
+}
+
+/* Para tablets y teléfonos */
+@media screen and (max-width: 1024px) {
+    .card-style {
+        margin-top: 0;
+        padding: 1.2em;
+
+    }
+    .divQA {
+        margin-top: 0;
+    }
+    header {
+        margin: auto;
+    }
+    .intro {
+        display: flex;
+        flex-direction: column;
+        height: 5em;
+        text-align: center;
+    }
+    #answer {
+        flex-direction: column;
+    }
+    .display-1 {
+        font-size: 3em !important;
+    }
+
 }

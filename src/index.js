@@ -341,16 +341,17 @@ const showMovies = (movies) => {
             let eachQuestions = 
                 `<form id=${i}><br>
                 <p class="text-questions">${arrayOf[i].question}</p>
-                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[0].isRight}>${arrayOf[i].answers[0].ans}<br>
-                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[1].isRight}>${arrayOf[i].answers[1].ans}<br>
-                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[2].isRight}>${arrayOf[i].answers[2].ans}<br>
-                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[3].isRight}>${arrayOf[i].answers[3].ans}
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[0].isRight}><label for="radio-one">${arrayOf[i].answers[0].ans}</label><br>
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[1].isRight}><label for="radio-one">${arrayOf[i].answers[1].ans}</label><br>
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[2].isRight}><label for="radio-one">${arrayOf[i].answers[2].ans}</label><br>
+                <input type="radio" name="ansJ" class="form-radio" value=${arrayOf[i].answers[3].isRight}><label for="radio-one">${arrayOf[i].answers[3].ans}</label>
                 </form><br>`;
             allQuestions = allQuestions + eachQuestions;
         }
         const submitAnswer = document.createElement('div');
         submitAnswer.classList.add('summitDiv')
-        submitAnswer.innerHTML = `<button class="btn btn-danger" id="buttonResults" class="btn btn-warning">Enviar</button>`;
+        submitAnswer.innerHTML = `<button class="btn btn-danger" id="buttonResults" class="btn btn-warning">Enviar
+                                </button>`;
 
         questionsPart.innerHTML = allQuestions;
         document.getElementById('answer').appendChild(card);
@@ -370,19 +371,22 @@ const showMovies = (movies) => {
         
         if (score == 5) {
             divAnswer.innerHTML = `<div class ='premio'>
-                                    <h1 class = 'display-1'>¡Felicitaciones!</h1> <img src="images/confetiDos.jpeg" class="confetis">
+                                    <h1 class = 'display-1'>¡Felicitaciones!</h1>
                                     <h4  class= 'letras'>Has acertado ${score} de 5</h4>
                                     <h5  class= 'letras'>Has ganado 2 entradas al cine</h5>
                                     <h5  class= 'letras'>para ver tu película favorita</h5>
-                                    <p  class= 'letras'>Guarda este código QR y preséntalo en las boleterías</p>
-                                    <img src=images/qr_img.png></div>`
+                                    <p  class= 'letras p-little'>Guarda este código QR y preséntalo en las boleterías</p>
+                                    <img src=images/qr_img.png></div>`;
+            confetti.start();
+            setTimeout(confetti.stop, 4000);
+
         } else {
             divAnswer.innerHTML = `<div class = 'premio'>
-                                    <h1 class = 'display-1'>Has estado cerca</h1><img src="images/emoji.png" class="confetis">
+                                    <h1 class = 'display-1'>Has estado cerca</h1><img src="images/sad.png" class="emoji">
                                     <h4 class= 'letras'> Acertaste ${score} de 5</h4>
-                                    <h5 class= 'letras'>Pero sigue intentándolo</h5>
-                                    <p class= 'letras'>Participa de nuevo por tus entradas de regalo</p>
-                                    <a id="restart" class= 'letras' href="index.html">Volver a intentarlo</a></div>`
+                                    <h5 class= 'letras'>¡Pero sigue intentándolo!</h5>
+                                    <p class= 'letras p-little'>Participa de nuevo por tus entradas de regalo</p>
+                                    <a id="restart" class= 'letras p-little' href="index.html">Volver a intentarlo</a></div>`
         }
     });
     }
@@ -416,7 +420,7 @@ const showMovies = (movies) => {
 
 // Función de Fetch 
 let getAnswer = (q) => {
-    fetch("http://www.omdbapi.com/?i="+ q +"&apikey=e0c6a2f1")
+    fetch("https://www.omdbapi.com/?i="+ q +"&apikey=e0c6a2f1")
         .then(response => response.json())
         .then(showMovies)
         .catch((error) => { console.log(error) })
