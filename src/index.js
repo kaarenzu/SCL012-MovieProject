@@ -49,7 +49,6 @@ const showMovies = (movies) => {
                     {ans:"a y b", isRight: false}]
         }
     ];
-
     // PREGUNTAS DE THE IRISHMAN
     let questionsIrishman = [
         {
@@ -88,7 +87,6 @@ const showMovies = (movies) => {
                     {ans:"Anthony McCarten", isRight: false}]
         }
     ];
-
         // PREGUNTAS DE THE MARRIAGE STORY
         let questionsMarriage = [
             {
@@ -323,9 +321,6 @@ const showMovies = (movies) => {
             }
         ];
 
-
-    
-
     let title = data.Title;
     let posterurl =data.Poster;
     let score = 0;
@@ -375,11 +370,11 @@ const showMovies = (movies) => {
         
         if (score == 5) {
             divAnswer.innerHTML = `<div class ='premio'>
-                                    <h1 class = 'display-1'>¡Felicitaciones!</h1> <img src="images/confetiDos.jpeg" class="confetis"> 
+                                    <h1 class = 'display-1'>¡Felicitaciones!</h1> <img src="images/confetiDos.jpeg" class="confetis">
                                     <h4  class= 'letras'>Has acertado ${score} de 5</h4>
                                     <h5  class= 'letras'>Has ganado 2 entradas al cine</h5>
                                     <h5  class= 'letras'>para ver tu película favorita</h5>
-                                    <p  class= 'letras'>Guarda este código QR y preséntalo en las bolterías</p>
+                                    <p  class= 'letras'>Guarda este código QR y preséntalo en las boleterías</p>
                                     <img src=images/qr_img.png></div>`
         } else {
             divAnswer.innerHTML = `<div class = 'premio'>
@@ -416,11 +411,10 @@ const showMovies = (movies) => {
     }
     else if (data.imdbID == "tt8579674"){
         return newQuiz(quiestions1917);
-    }
-    
+    }  
 };
 
-//Función de Fetch 
+// Función de Fetch 
 let getAnswer = (q) => {
     fetch("http://www.omdbapi.com/?i="+ q +"&apikey=e0c6a2f1")
         .then(response => response.json())
@@ -474,6 +468,3 @@ quiz1917.addEventListener ('click', (e) => {
     getAnswer(movieArray[7]);
 
 });
-
-
-
