@@ -426,7 +426,7 @@ const showMovies = (movies) => {
 
 //Función de Fetch 
 let getAnswer = (q) => {
-    fetch("http://www.omdbapi.com/?i="+ q +"&apikey=e0c6a2f1")
+    fetch("https://www.omdbapi.com/?i="+ q +"&apikey=e0c6a2f1")
         .then(response => response.json())
         .then(showMovies)
         .catch((error) => { console.log(error) })
