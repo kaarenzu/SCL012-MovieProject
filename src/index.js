@@ -380,18 +380,18 @@ const showMovies = (movies) => {
                                     <h4  class= 'letras'>Has acertado ${score} de 5</h4>
                                     <h5  class= 'letras'>Has ganado 2 entradas al cine</h5>
                                     <h5  class= 'letras'>para ver tu película favorita</h5>
-                                    <p  class= 'letras'>Guarda este código QR y preséntalo en las bolterías</p>
+                                    <p  class= 'letras p-little'>Guarda este código QR y preséntalo en las bolterías</p>
                                     <img src=images/qr_img.png></div>`;
             confetti.start();
             setTimeout(confetti.stop, 4000);
 
         } else {
             divAnswer.innerHTML = `<div class = 'premio'>
-                                    <h1 class = 'display-1'>Has estado cerca</h1><img src="images/emoji.png" class="confetis">
+                                    <h1 class = 'display-1'>Has estado cerca</h1><img src="images/sad.png" class="emoji">
                                     <h4 class= 'letras'> Acertaste ${score} de 5</h4>
-                                    <h5 class= 'letras'>Pero sigue intentándolo</h5>
-                                    <p class= 'letras'>Participa de nuevo por tus entradas de regalo</p>
-                                    <a id="restart" class= 'letras' href="index.html">Volver a intentarlo</a></div>`
+                                    <h5 class= 'letras'>¡Pero sigue intentándolo!</h5>
+                                    <p class= 'letras p-little'>Participa de nuevo por tus entradas de regalo</p>
+                                    <a id="restart" class= 'letras p-little' href="index.html">Volver a intentarlo</a></div>`
         }
     });
     }
